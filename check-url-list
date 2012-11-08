@@ -28,9 +28,15 @@ if(!file_exists($file_path)) {
     $html = curl_exec($ch);
 
     $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    $redirect_url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+    // $redirect_url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
 
-    echo "Header Code: ";
+    $curl_info = curl_getinfo($ch);
+
+    $redirect_url = $curl_info['url'];
+
+    echo "Checked URL: " . $url . "\r";
+
+    echo "Last Header Code: ";
 
     if($status_code == "301" || $status_code == "200") {
       echo "\033[32m" . $status_code . "\033[37m";
@@ -38,9 +44,9 @@ if(!file_exists($file_path)) {
       echo "\033[31m" . $status_code . "\033[37m";
     }
 
-    echo " URL: " . $line . "\r";
+    echo " Last URL: " . $redirect_url . "\n\n";
 
-    sleep(1);
+    sleep(0.5);
 
   }
   fclose($file);

@@ -9,6 +9,15 @@ This script was intended to be used to check Google
 Crawl Errors after an attempt at fixing them has been
 made.
 
+In Google Webmaster Tools, export URLS as CSV, open in
+excel/numbers/google docs, highlight url column and paste into a text file.
+Then run this script on it.
+
+If the script doesn't run, you may need to:
+
+```bash
+chmod +x check-url-list
+```
 
 ## Example Text File Contents ##
 

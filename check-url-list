@@ -6,8 +6,8 @@ $file_path = $argv[1];
 
 if(!file_exists($file_path)) {
 
-  echo $file_path;
-  echo "File does not exist.";
+  echo '"' . $file_path . '"';
+  echo " file does not exist.";
 
 } else {
 

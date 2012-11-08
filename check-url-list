@@ -16,8 +16,6 @@ if(!file_exists($file_path)) {
   while(!feof($file)) {
     $line = fgets($file);
 
-    echo "Checking: " . $line;
-
     $url = $line;
 
     $ch = curl_init();
@@ -30,11 +28,15 @@ if(!file_exists($file_path)) {
     $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     $redirect_url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
 
+    echo "Header Code: ";
+
     if($status_code == "301" || $status_code == "200") {
-      echo "\033[32m" . $status_code . ": " . $redirect_url . "\n" . "\033[37m\r\n";
+      echo "\033[32m" . $status_code . "\033[37m";
     } else {
-      echo "\033[31m" . $status_code . ": " . $redirect_url . "\n" . "\033[37m\r\n";
+      echo "\033[31m" . $status_code . "\033[37m";
     }
+
+    echo " URL: " . $line . "\r";
 
     sleep(1);
 

@@ -44,7 +44,7 @@ if(!file_exists($file_path)) {
       echo "\033[31m" . $status_code . "\033[37m";
     }
 
-    echo " Last URL: " . $redirect_url . "\n\n";
+    echo " Final URL: " . $redirect_url . "\n\n";
 
     sleep(0.5);
 

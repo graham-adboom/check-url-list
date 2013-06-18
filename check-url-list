@@ -16,7 +16,7 @@ if(!file_exists($file_path)) {
   while(!feof($file)) {
     $line = fgets($file);
 
-    $url = $line;
+    $url = urldecode($line);
 
     $ch = curl_init();
 

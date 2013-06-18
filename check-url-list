@@ -36,7 +36,7 @@ if(!file_exists($file_path)) {
 
     echo "Checked URL: " . $url . "\r";
 
-    echo "Last Header Code: ";
+    echo "Final Header Code: ";
 
     if($status_code == "301" || $status_code == "200") {
       echo "\033[32m" . $status_code . "\033[37m";

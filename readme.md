@@ -21,6 +21,12 @@ If the script doesn't run, you may need to:
 chmod +x check-url-list
 ```
 
+**Usage**
+
+```
+check-url-list ~/file-with-urls.txt
+```
+
 ## Example Text File Contents ##
 
 ```

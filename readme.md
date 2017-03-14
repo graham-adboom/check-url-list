@@ -34,6 +34,3 @@ http://www.somedomain.com/page1
 http://www.somedomain.com/page2
 http://www.somedomain.com/page3
 ```
-
-
-Graham Mickle
